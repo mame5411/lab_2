@@ -7,10 +7,12 @@ echo "Enter Pattern: "
 read expression
 echo "Enter FileName: "
 read fileName
-grep expression fileName
+grep $expression $fileName
 grep -c "-" regex_practice.txt
 grep -c "@" regex_practice.txt
 grep "303-" regex_practice.txt > phone_results.txt
 grep "@geocities.com" regex_practice.txt > email_results.txt
 grep $1 regex_practice.txt > command_results.txt
+git add phone_results.txt email_results.txt command_results.txt
+git commit -m "Add All Results"
 
